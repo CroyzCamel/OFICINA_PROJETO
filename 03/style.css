@@ -1,0 +1,112 @@
+:root {
+    --fonte-principal: Arial, sans-serif;
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333;
+    --cor-branca: #fff;
+    --cor-borda: #ccc;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --cor-sucesso: #28a745;
+    --cor-sucesso-hover: #218838;
+    --cor-info: #007bff;
+    --cor-info-hover: #0056b3;
+    --cor-perigo: #dc3545;
+    --cor-perigo-hover: #c82333;
+    --cor-fundo-item: #f9f9f9;
+    --borda-radius: 4px;
+    --sombra-box: 0 0 10px var(--cor-sombra);
+}
+
+body {
+    font-family: var(--fonte-principal);
+    margin: 0;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+}
+
+h1 {
+    text-align: center;
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: var(--cor-branca);
+    padding: 20px;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-box);
+}
+
+#task-input {
+    width: calc(100% - 110px);
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-radius);
+    font-size: 16px;
+}
+
+#add-task-btn {
+    width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: var(--cor-sucesso);
+    color: var(--cor-branca);
+    border: none;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#add-task-btn:hover {
+    background-color: var(--cor-sucesso-hover);
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    margin-bottom: 10px;
+    border-radius: var(--borda-radius);
+    background-color: var(--cor-fundo-item);
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-item button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.task-item button.complete-btn {
+    background-color: var(--cor-info);
+    color: var(--cor-branca);
+}
+
+.task-item button.complete-btn:hover {
+    background-color: var(--cor-info-hover);
+}
+
+.task-item button.remove-btn {
+    background-color: var(--cor-perigo);
+    color: var(--cor-branca);
+}
+
+.task-item button.remove-btn:hover {
+    background-color: var(--cor-perigo-hover);
+}

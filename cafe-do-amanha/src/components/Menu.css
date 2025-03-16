@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #2c2c2c;
+    --secondary-color: #f5a623;
+    --text-color: #ffffff;
+    --font-primary: 'Merriweather', serif;
+    --font-secondary: 'Playfair Display', serif;
+    --border-radius: 15px;
+    --box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes gerais */
+.menu-container {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.menu-header h1 {
+    font-size: 2.5rem; /* Reduzido para melhor ajuste no mobile */
+    font-family: var(--font-secondary);
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.menu-header p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: var(--secondary-color);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-wrap: wrap; /* Permitir que o layout se ajuste ao conteúdo */
+    gap: 20px;
+}
+
+.menu-image {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    width: 100%;
+    max-width: 400px; /* Garantir que a imagem ocupe a largura total */
+    height: 300px;
+}
+
+.menu-image img {
+    max-width: 100%; /* Imagem ocupa o máximo da largura disponível */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Espaçamento abaixo da imagem */
+}
+.menu-tabs {
+    flex: 1;
+    min-width: 100%; /* Garantir que o menu ocupe a largura total */
+}
+
+/* Ajustes para os itens da lista */
+ul.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem; /* Tamanho ajustado para melhor leitura no mobile */
+    line-height: 2;
+}
+
+ul.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+ul.menu-list li span {
+    font-weight: bold;
+}
+
+/* Estilos para as abas */
+.nav-tabs .nav-link {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1rem; /* Tamanho reduzido para melhor ajuste */
+    padding: 10px 20px;
+    text-align: center;
+    border: none; 
+    margin: 0 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    border: none; /* Remove a borda padrão */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo das abas */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.6; /* Ajusta o espaçamento entre as linhas */
+}
+
+.menu-list li {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 5px; 
+}
+
+.menu-list li span {
+    font-weight: bold;
+    color: var(--secondary-color); 
+    margin-left: 10px; 
+}
+
+.menu-list li small {
+    font-size: 0.9rem;
+    color: #ccc; 
+    margin-top: 5px; 
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-image img {
+        width: 500px; /* Permitir que a imagem ocupe a maior parte da largura */
+        max-width: 100%; /* Remover a limitação de largura para mobile */
+        margin-bottom: 15px;
+    }
+
+    ul.menu-list li {
+        font-size: 0.9rem; /* Tamanho menor para melhorar a leitura */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 1rem; /* Tamanho ajustado para melhor visualização */
+    }
+
+    .menu-header h1 {
+        font-size: 2rem; /* Ajustar o tamanho do título */
+    }
+}
